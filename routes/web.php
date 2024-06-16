@@ -17,6 +17,7 @@ Route::view('profile', 'profile')
 Route::middleware('auth')->group(function () {
     Volt::route('users', 'pages.users.list')
         ->name('users.index');
+    Volt::route('appointments', 'pages.appointments.create')->name('appointments.create');
 });
 
 
