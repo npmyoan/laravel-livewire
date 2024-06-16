@@ -35,6 +35,8 @@ $save = function () {
 
                     <form wire:submit="save">
 
+                        <legend>Add new Appointment</legend>
+
                         <div>
                             <select wire:model="form.doctor_id">
                                 <option selected>--Selecione el Doctor--</option>
@@ -69,11 +71,12 @@ $save = function () {
                                 <span class="error">{{ $message }}</span>
                             @enderror
                         </div>
-
+                        </fieldset>
                         <button type="submit"
                             class="py-3 px-6 bg-slate-600 text-white uppercase rounded-xl hover:bg-slate-500 active:scale-95 transition-colors cursor-pointer">
 
                             >Save</button>
+
                     </form>
                 </div>
             </div>
