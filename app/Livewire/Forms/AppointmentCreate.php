@@ -21,12 +21,11 @@ class AppointmentCreate extends Form
 
     public function store()
     {
-        // dd($this->doctor_id, $this->patient_id, $this->schedule_id);
-        // Appointment::create($this->only(['doctor_id', 'patient_id', 'schedule_id']));
         Appointment::create([
             'doctor_id' => (int) $this->doctor_id,
             'patient_id' => (int) $this->patient_id,
             'schedule_id' => (int) $this->schedule_id,
         ]);
+
     }
 }
