@@ -11,7 +11,7 @@ $save = function () {
     $this->validate();
     $this->form->store();
 
-    // $this->redirect('/dashboard');
+    $this->redirect('/dashboard');
 };
 ?>
 
