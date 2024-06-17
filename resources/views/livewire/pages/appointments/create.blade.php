@@ -11,7 +11,7 @@ $save = function () {
     $this->validate();
     $this->form->store();
 
-    $this->redirect('/dashboard');
+    $this->redirect('/dashboard', navigate: true);
 };
 ?>
 
@@ -33,7 +33,7 @@ $save = function () {
                 </div>
                 <div class="p-6 text-gray-900">
 
-                    <form wire:submit="save">
+                    <form wire:submit.prevent="save">
 
                         <legend>Add new Appointment</legend>
 
@@ -73,9 +73,9 @@ $save = function () {
                         </div>
                         </fieldset>
                         <button type="submit"
-                            class="py-3 px-6 bg-slate-600 text-white uppercase rounded-xl hover:bg-slate-500 active:scale-95 transition-colors cursor-pointer">
+                            class=" mt-3 py-1 px-3 font-bold bg-slate-600 text-white uppercase rounded-xl hover:bg-slate-500 active:scale-95 transition-colors cursor-pointer">
 
-                            >Save</button>
+                            Save</button>
 
                     </form>
                 </div>
